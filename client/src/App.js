@@ -11,9 +11,9 @@ import FullBody from './components/FullBody';*/
 
 function App() {
   return (
-    <div className="App">
-    <LoginSignup />
-    <HomePage />
+    <div id='root' className="App">
+     <LoginSignup />
+     <HomePage />
   </div>
     
   );
