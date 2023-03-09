@@ -1,3 +1,4 @@
+import {AuthProvider} from "./utils/auth.js";
 //import logo from './logo.svg';
 import './App.css';
 //import LoginSignup from './components/LoginSignup';
@@ -13,6 +14,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
     <BrowserRouter>
   
     <Routes> 
@@ -23,12 +25,13 @@ function App() {
       <Route path='/legs' element={<Legs /> }/>
       <Route path='/fullbody' element={<FullBody /> }/>
       <Route path='/journal' element={<JournalEntry /> }/>
+      
 
 
     </Routes>
 
     </BrowserRouter>
-
+    </AuthProvider>
    
   </div>
     
