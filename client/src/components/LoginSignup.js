@@ -19,7 +19,7 @@ function LoginSignup() {
   }
 
   return (
-    <div id="root">
+    <div>
       <h1>Login or Signup</h1>
       <form>
         <label>

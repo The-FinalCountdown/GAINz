@@ -1,33 +1,30 @@
 import React from "react";
-import { Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function HomePage({ user }) {
   return (
     <div>
       <header>
-        <h1 class="title">GAINZ</h1>
-        <h1 class="title">Welcome {user}, WHAT ARE WE HITTING TODAY?!</h1>
+        <h1 className="title">GAINZ</h1>
+        <h1 className="title">Welcome {user}, WHAT ARE WE HITTING TODAY?!</h1>
       </header>
-      <div class="go">
-        <Link to="/Push">
-            <button class="btn">Push</button>
-        </Link>
-        <button class="btn">Pull</button>
-        <button class="btn">Legs</button>
-        <button class="btn">Arms</button>
-      </div>
-      <Switch>
-        <Route path="/Push" />
-        <Route/>
-        <Route/>
-        <Route/>
+      <div className="go">
+       
+            <button class="btn"><Link to={"/push"}>Push</Link></button><br></br>
+       
+        <button className="btn"><Link to={"/pull"}>Pull</Link></button><br></br>
+        <button className="btn"><Link to={"/legs"}>Legs</Link></button><br></br>
+        <button className="btn"><Link to={"/arms"}>Arms</Link></button><br></br>
+        <button className="btn"><Link to={"/fullbody"}>FullBody</Link></button><br></br>
+        <button className="btn"><Link to={"/journal"}>Journal</Link></button>
 
-      </Switch>
+        
+
+      </div>
+      
     </div>
   );
 }
 
 export default HomePage;
-
-

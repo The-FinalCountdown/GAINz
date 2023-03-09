@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Pull() {
+const Pull = () => {
+  const [completed, setCompleted] = useState(false);
+
+  const handleComplete = () => {
+    setCompleted(true);
+  }
+
+
   return (
     <div>
       <h1>Pull</h1>
@@ -42,7 +49,9 @@ function Pull() {
           <label for="item9">Cool down: 5-10 minutes of stretching</label>
         </li>
       </ul>
-      <button class="complete">WORKOUT COMPLETE</button>
+      <button className="complete" onClick={handleComplete}>
+        {completed ? 'WORKOUT COMPLETED' : 'COMPLETE WORKOUT'}
+      </button>
     </div>
   );
 }
