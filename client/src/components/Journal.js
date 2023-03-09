@@ -27,7 +27,7 @@ function JournalEntry() {
           Title:
           <input type="text" value={title} onChange={handleTitleChange} />
         </label>
-        <br />
+        <br/>
         <label>
           Content:
           <textarea value={content} onChange={handleContentChange} />
